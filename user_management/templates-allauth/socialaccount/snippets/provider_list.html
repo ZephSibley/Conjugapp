@@ -1,0 +1,22 @@
+{% load socialaccount %}
+
+{% get_providers as socialaccount_providers %}
+
+{% for provider in socialaccount_providers %}
+{% if provider.id == "openid" %}
+{% for brand in provider.get_brands %}
+<li style="list-style-type: none;">
+  <a title="{{brand.name}}" 
+     class="btn btn-fb socialaccount_provider {{provider.id}} {{brand.id}}" 
+     href="{% provider_login_url provider.id openid=brand.openid_url process=process %}"
+     ><i class="fa fa-facebook pr-1"></i>{{brand.name}}</a> <!--facebook only-->
+</li>
+{% endfor %}
+{% endif %}
+<li style="list-style-type: none;">
+    <!--facebook only-->
+  <button class="btn btn-facebook"><a title="{{provider.name}}" class="socialaccount_provider {{provider.id}}" style="text-decoration: none; color: white;"
+     href="{% provider_login_url provider.id process=process scope=scope auth_params=auth_params %}"><i class="fa fa-facebook"></i> Sign in with {{provider.name}}</a>
+    </button> 
+</li>
+{% endfor %}

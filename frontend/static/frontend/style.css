@@ -1,0 +1,41 @@
+.primary {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.graph-container {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 10px;
+  width: 70%;
+  height: 500px;
+  background-color: #fff;
+}
+
+.graph-input-form {
+  margin-left: 1%;
+  margin-top: 50px;
+  width: auto;
+}
+
+.graph-input-form, button {
+  float: right;
+}
+
+.graph-entry-deleter {
+  margin-left: 70px;
+  margin-top: 10px;
+}
+
+@media only screen and (max-width: 800px) {
+  .graph-container{
+    width: 100%;
+  }
+  .graph-input-form{
+    width: 100%;
+    margin-top: 30px;
+    margin-left: 5%;
+    margin-right: 2%;
+  }
+}

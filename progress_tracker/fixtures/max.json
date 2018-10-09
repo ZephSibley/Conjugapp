@@ -1,0 +1,29 @@
+[
+    {
+        "model": "progress_tracker.max",
+        "pk": 1,
+        "fields": {
+            "exercise": 2,
+            "date": "2018-08-14",
+            "max_lift": 115
+        }
+    },
+    {
+        "model": "progress_tracker.max",
+        "pk": 2,
+        "fields": {
+            "exercise": 2,
+            "date": "2018-08-8",
+            "max_lift": 110
+        }
+    },
+    {
+        "model": "progress_tracker.max",
+        "pk": 3,
+        "fields": {
+            "exercise": 2,
+            "date": "2018-08-01",
+            "max_lift": 80
+        }
+    }
+]

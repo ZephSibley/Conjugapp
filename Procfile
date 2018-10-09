@@ -1,0 +1,1 @@
+web: gunicorn Conjugapp.wsgi --log-file -
